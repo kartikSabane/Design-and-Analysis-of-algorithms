@@ -1,12 +1,19 @@
 package DAA;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class FracKnapack {
     public static void main(String args[]){
-        int capacity =10;
-        int weight[]={3,3,2,5,1};
-        int value[]={10,15,10,12,8};
+       Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of item:");
+        int capacity =sc.nextInt();
+        int weight[]=new int[capacity];
+        int value[]=new int[capacity];
+        for(int i=0;i<capacity;i++){
+            System.out.println("Enter the weight and value of "+(i+1)+" element");
+            weight[i]=sc.nextInt();
+            value[i]=sc.nextInt();
+        }
         double ratio[]=new double[value.length];
 
         //calculate value/weight
