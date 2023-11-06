@@ -1,10 +1,18 @@
 package DAA;
 
+import java.util.*;
 public class Knapsack01 {
     public static void main(String args[]){
-        int capacity=50;
-        int value[]={60,100,120};
-        int weight[]={10,20,30};
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of item:");
+        int capacity =sc.nextInt();
+        int weight[]=new int[capacity];
+        int value[]=new int[capacity];
+        for(int i=0;i<capacity;i++){
+            System.out.println("Enter the weight and value of "+(i+1)+" element");
+            weight[i]=sc.nextInt();
+            value[i]=sc.nextInt();
+        }
         int number=value.length;
 
         int k[][]=new int[number+1][capacity+1];
