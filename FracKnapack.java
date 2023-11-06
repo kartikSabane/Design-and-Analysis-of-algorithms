@@ -5,10 +5,12 @@ import java.util.*;
 public class FracKnapack {
     public static void main(String args[]){
        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of capacity:");
+        int capacity=sc.nextInt();
         System.out.println("Enter the number of item:");
-        int capacity =sc.nextInt();
-        int weight[]=new int[capacity];
-        int value[]=new int[capacity];
+        int num =sc.nextInt();
+        int weight[]=new int[num];
+        int value[]=new int[num];
         for(int i=0;i<capacity;i++){
             System.out.println("Enter the weight and value of "+(i+1)+" element");
             weight[i]=sc.nextInt();
